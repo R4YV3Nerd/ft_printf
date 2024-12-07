@@ -1,5 +1,4 @@
-#include "ft_printf.h"
-#include <unistd.h>
+#include ft_printf.h
 
 int ft_printf(const char *format, ...)
 {
@@ -11,34 +10,46 @@ int ft_printf(const char *format, ...)
     while (*format)
     {
         if (*format == '%' && *(format + 1))
-	{
+        {
             format++;
-            if (*format == 'd')
-	    {
+            if (*format == 'd' || *format == 'i')
+            {
                 int num = va_arg(args, int);
-                ft_putnbr(num);
+                count += ft_putnbr(num);
             }
             else if (*format == 's')
-	    {
+            {
                 char *str = va_arg(args, char *);
-                ft_putstr(str);
+                count += ft_putstr(str);
             }
             else if (*format == 'x')
-	    {
+            {
                 unsigned int hex = va_arg(args, unsigned int);
-                ft_puthex(hex);
+                count += ft_puthex(hex);
+            }
+            else if (*format == 'X')
+            {
+                unsigned int hex = va_arg(args, unsigned int);
+                count += ft_puthex_uppercase(hex);
             }
             else if (*format == 'p')
-	    {
+            {
                 void *ptr = va_arg(args, void *);
-                ft_putpointer(ptr);
+                count += ft_putpointer(ptr);
+            }
+            else if (*format == '%')
+            {
+                count += ft_putchar('%');
             }
         }
-	else
-            ft_putchar(*format);
+        else
+        {
+            count += ft_putchar(*format);
+        }
         format++;
     }
 
     va_end(args);
     return count;
 }
+
