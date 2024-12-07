@@ -6,7 +6,7 @@
 /*   By: maitoumg <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/07 11:27:03 by maitoumg          #+#    #+#             */
-/*   Updated: 2024/12/07 13:58:09 by maitoumg         ###   ########.fr       */
+/*   Updated: 2024/12/07 14:25:28 by maitoumg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	handle_string(va_list args)
 {
 	char	*str;
 
-	*str = va_arg(args, char *);
+	str = va_arg(args, char *);
 	if (str == NULL)
 		str = "(null)";
 	return (ft_putstr(str));
@@ -24,7 +24,6 @@ int	handle_string(va_list args)
 
 int	handle_format_specifier(char specifier, va_list args)
 {
-	char	*str;
 	int		count;
 
 	count = 0;
@@ -49,7 +48,7 @@ int	handle_format_specifier(char specifier, va_list args)
 
 int	ft_printf(const char *format, ...)
 {
-	int	count;
+	int		count;
 	va_list	args;
 
 	va_start(args, format);

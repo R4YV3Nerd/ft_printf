@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: maitoumg <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/12/07 14:26:55 by maitoumg          #+#    #+#             */
+/*   Updated: 2024/12/07 14:31:29 by maitoumg         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 
@@ -15,4 +27,3 @@ int		ft_putpointer(void *ptr);
 int		ft_putnumber_base(unsigned long long num, int base, int is_upper);
 
 #endif
-
