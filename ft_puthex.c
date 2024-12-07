@@ -1,13 +1,6 @@
-#include ft_printf.h
+#include "ft_printf.h"
 
-int ft_putstr(char *str)
+int ft_puthex(unsigned int n)
 {
-    int count = 0;
-    while (str && *str)
-    {
-        count += ft_putchar(*str);
-        str++;
-    }
-    return count;
+    return ft_putnumber_base((unsigned long long)n, 16, 0);
 }
-

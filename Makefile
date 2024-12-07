@@ -1,4 +1,5 @@
-SRCS = ft_putchar.c ft_putnbr.c putnumber_base.c ft_putstr.c ft_puthex.c ft_puthex_uppercase.c ft_putpointer.c ft_printf.c
+SRCS = ft_putchar.c ft_putnbr.c ft_putnumber_base.c ft_putstr.c \
+       ft_puthex.c ft_puthex_uppercase.c ft_putpointer.c ft_printf.c
 OBJS = $(SRCS:.c=.o)
 NAME = libftprintf.a
 CC = gcc

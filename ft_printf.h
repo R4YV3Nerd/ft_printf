@@ -12,7 +12,7 @@ int		ft_putstr(char *s);
 int		ft_puthex(unsigned int n);
 int		ft_puthex_uppercase(unsigned int n);
 int		ft_putpointer(void *ptr);
-int		ft_putnumber_base(unsigned long long n, char *base);
+int		ft_putnumber_base(unsigned long long num, int base, int is_upper);
 
 #endif
 
