@@ -1,8 +1,8 @@
 SRCS = ft_putchar.c ft_putnbr.c ft_putnumber_base.c ft_putstr.c \
-       ft_puthex.c ft_puthex_uppercase.c ft_putpointer.c ft_printf.c
+	ft_puthex.c ft_puthex_uppercase.c ft_putpointer.c ft_printf.c
 OBJS = $(SRCS:.c=.o)
 NAME = libftprintf.a
-CC = gcc
+CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
 all: $(NAME)
@@ -19,4 +19,3 @@ fclean: clean
 re: fclean all
 
 .PHONY: clean fclean re
-

@@ -6,15 +6,15 @@
 /*   By: maitoumg <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/07 14:27:27 by maitoumg          #+#    #+#             */
-/*   Updated: 2024/12/07 14:27:32 by maitoumg         ###   ########.fr       */
+/*   Updated: 2025/02/10 21:34:20 by maitoumg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int ft_putchar(char c)
+int	ft_putchar(char c)
 {
-    if (write(1, &c, 1) == -1)
-        return (-1);
-    return (1);
+	if (write(1, &c, 1) == -1)
+		return (-1);
+	return (1);
 }
